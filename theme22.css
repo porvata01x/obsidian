@@ -1,0 +1,303 @@
+.theme-dark {
+  --color-gray:                                  #777679;
+  --color-cyan:                                  #24e4b7;
+  --color-red:                                   #e32525;
+
+  --background-primary:                          #111013;
+  --background-primary-alt:                      #42444744;
+  --background-secondary:                        #1d1b1f;
+  --background-secondary-alt:                    #1d1e1f;
+  --background-modifier-form-field:              #4b4c4da6;
+  --background-modifier-success:                 #33c816;
+  --background-modifier-border:                  #dae1ea31;
+
+  --interactive-normal:                          #3c3a40;
+  --interactive-hover:                           #252327;
+  --interactive-accent:                          #767f95; 
+  --interactive-accent-hover:                    #9aa5c0;
+  --interactive-success:                         #33c816;
+
+  --text-selection:                              #3e496373;
+  --text-normal:                                 #c6c6c6;
+  --text-faint:                                  #565658;
+  --text-muted:                                  #cfced0;
+  --text-accent:                                 #7e8aa9;
+  --text-accent-hover:                           #9aa1b3;
+  --text-highlight-bg:                           #ffee003a;
+  --text-highlight-fg:                           #bbb44c;
+  --text-error:                                  var(--color-red);
+
+  --tab-text-color-focused-active:               var(--text-accent);
+  --tab-text-color-focused-active-current:       var(--text-accent);
+
+  --icon-color:                                  #b4b4b6;
+  --icon-color-hover:                            var(--text-accent);
+  --icon-color-focused:                          var(--text-accent);
+
+  --flashing-background:                         #00eeff;
+
+  /* --graph-line:                               ; */
+  /* --graph-node:                               ; */
+  /* --graph-node-tag:                           ; */
+  /* --graph-node-attachment:                    ; */
+
+  /* --calendar-hover:                           ; */
+  /* --calendar-background-hover:                ; */
+  /* --calendar-week:                            ; */
+  /* --calendar-today:                           ; */
+
+  --nav-item-background-active:                  var(--background-primary);
+  /* --nav-item-color-hover:                      var(--text-accent); */
+  /* --nav-item-color-active:                     var(--text-accent); */
+  --nav-file-tag:                                rgba(var(--text-error), 0.9);
+
+  --link-color:                                   var(--text-accent);
+}
+
+body {
+  --callout-default: 186, 183, 189;
+}
+
+/* FIX ================================================================================= */
+.markdown-rendered .list-collapse-indicator {
+  margin-inline-start: -2.30em;
+}
+
+/* LINK ================================================================================ */
+.theme-dark {
+  --link-decoration:                              none;
+  --link-decoration-hover:                        none;
+  --link-external-decoration:                     none;
+  /* --link-external-decoration-hover:               none;  */
+  --link-external-color:                         #4a94e8;
+  --link-external-color-hover:                   #8ab7eb;
+}
+
+.markdown-rendered .internal-link.is-unresolved { color: #ff2a1b; }
+.markdown-source-view.mod-cm6 .is-unresolved .cm-underline { color: #ff2a1b; }
+/* AUTO-LINK URL: Underline Color and Styling */
+.cm-s-obsidian span.cm-url { color: #4a94e8; }
+/* LINK IN PREVIEW */
+.markdown-source-view.mod-cm6 .cm-url .cm-underline { color: #4a94e8; }
+/* LINK IN READING VIEW */
+.markdown-preview-view .external-link { color: #4a94e8; }
+/* MARKDOWN LINK IN PREVIEW */
+.markdown-source-view.mod-cm6 .cm-link .cm-underline { color: #4a94e8; }
+/* AUTO-LINK URL and/or INLINE-LINK: Mouse-Over Color */
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline:hover { color: #8ab7eb; }
+
+/* REMOVE MARK LINK */
+.external-link {
+  background-image: none;
+  padding-right: 0px;
+}
+
+/* TAG ================================================================================= */
+.theme-dark {
+  --tag-color:                                   var(--text-accent);
+  --tag-background:                              #8181812a;
+  --tag-background-hover:                        #dbdada2a;
+}
+
+body {
+  --tag-decoration:                              none;
+  --tag-decoration-hover:                        none;
+  --tag-padding-x:                               .5em;
+  --tag-padding-y:                               .2em;
+  --tag-radius:                                  .1em;
+}
+
+.markdown-rendered hr {
+  border: none;
+  border-top: var(--hr-thickness) solid;
+  border-color: var(--color-gray);
+}
+
+/* TEXT ================================================================================ */
+/* .text-justify :is(.markdown-preview-view p,.markdown-source-view .cm-line) { text-align: justify; } */
+.markdown-preview-view p,.markdown-source-view .cm-line { text-align: justify; }
+
+/* HEADING ============================================================================== */
+:root {
+  --font-size-h1:                                38px;
+  --font-size-h2:                                30px;
+  --font-size-h3:                                24px;
+  --font-size-h4:                                21px;
+  --font-size-h5:                                19px;
+  --font-size-h6:                                16px;
+}
+
+.HyperMD-header-1::after, h1,
+.HyperMD-header-2::after, h2,
+.HyperMD-header-3::after, h3,
+.HyperMD-header-6::after, h6 { 
+  display: block; 
+  content: ""; 
+  padding-bottom: 2px; 
+  border-bottom: 1px solid var(--color-gray); 
+}
+  
+.cm-header-1, .markdown-preview-view h1 { 
+  font-size: var(--font-size-h1); 
+}
+.cm-header-2, .markdown-preview-view h2 { 
+  font-size: var(--font-size-h2); 
+}
+.cm-header-3, .markdown-preview-view h3 { 
+  font-size: var(--font-size-h3); 
+}
+.cm-header-4, .markdown-preview-view h4 { 
+  font-size: var(--font-size-h4); 
+}
+.cm-header-5, .markdown-preview-view h5 { 
+  font-size: var(--font-size-h5); 
+}
+.cm-header-6, .markdown-preview-view h6 { 
+  font-size: var(--font-size-h6); 
+}
+
+/* FILE ================================================================================ */
+/* FILE COLOR */
+.nav-file-title-content { color: var(--link-color); }
+.nav-file-title-content:hover { color: var(--link-color-hover); }
+
+/* HEARDER ============================================================================= */
+.titlebar {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.titlebar-text,.titlebar-button {
+  display: none;
+}
+/* hide title bar text */
+.titlebar-text {
+  color: transparent;
+}
+
+/* TAB ========== ====================================================================== */
+/* TAB BACKGROUND */
+.workspace-tab-header-container {
+  background-color: var(--background-secondary);
+}
+.titlebar-button-container {
+  background-color: transparent !important;
+}
+/* ICON PAGE IN TAB */
+.workspace .mod-root .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon {
+  display: flex;
+}
+.workspace .mod-root .workspace-tab-header[data-type="markdown"] .workspace-tab-header-inner-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* TOOLIP ============================================================================== */
+.tooltip {
+  background-color: var(--background-primary);
+  color: var(--color-cyan);
+  word-wrap: break-word;
+}
+.tooltip .tooltip-arrow { border-bottom: 5px solid; }
+.tooltip.mod-right .tooltip-arrow { border-right: 5px solid; }
+.tooltip.mod-left .tooltip-arrow { border-left: 5px solid; }
+.tooltip.mod-top .tooltip-arrow { border-top: 5px solid; }
+
+/* CHECKBOX ========================================================================== */
+.theme-dark {
+  --checkbox-color:                              gray;
+  --checkbox-color-hover:                        #c0c4cc;
+  --checkbox-border-color:                       #a7a7a7;
+  --checkbox-border-color-hover:                 #c0c4cc;
+  --checklist-done-color:                        #7f838a;
+}
+
+body {
+  --checkbox-radius: 0;
+}
+input[type="checkbox"] {
+  border: 1px solid var(--color-gray);
+}
+input[type="checkbox"]:checked {
+  background-color: var(--checkbox-border-color-hover);
+  box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+input[type="checkbox"]:checked:after {
+  display: none;
+}
+
+/* LIST ============================================================================== */
+.cm-hmd-list-indent .cm-tab,
+ul ul {
+  position: relative;
+}
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before {
+  content: "";
+  border-left: 1px solid var(--color-gray);
+  position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before {
+  left: 0;
+  top: -5px;
+  bottom: -4px;
+}
+ul ul::before {
+  left: -11px;
+  top: 0;
+  bottom: 0;
+}
+
+/* COMMAND PALETTE ===================================================================== */
+.suggestion-hotkey {
+  background-color: #28282b;
+  color: white;
+  font-weight: 500;
+}
+.suggestion-item.is-selected {
+  background-color: #28282b;
+  border-radius: 5px;
+}
+.prompt {
+  border-radius: 8px;
+}
+/* .suggestion-highlight {
+  color: white !important;
+} */
+.suggestion-item.is-selected, .suggestion-highlight {
+  color: white !important;
+}
+input.prompt-input {
+box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px !important;
+}
+.prompt-instruction-command {
+  background-color: rgb(250, 252, 255, 0.5);
+  color: black;
+  border-radius: 10px;
+  padding: 0 3px 0 3px;
+}
+
+/* IMAGE BORER ========================================================================= */
+.markdown-rendered img {
+  padding: 2px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* SPOILER TEXT ======================================================================== */
+.theme-dark {
+  --spoiler-bg:                                  var(--text-muted);
+}
+
+div:not(.CodeMirror-activeline) > .CodeMirror-line .cm-em.cm-strikethrough,
+em > del {
+  font-style: initial;
+  text-decoration: unset;
+  background-color: var(--spoiler-bg);
+  color: var(--spoiler-bg);
+}
+.CodeMirror-activeline > .CodeMirror-line .cm-em.cm-strikethrough,
+em > del:hover,
+.cm-em.cm-strikethrough:hover {
+  background-color: var(--background-secondary-alt) !important;
+}
